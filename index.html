@@ -1,1 +1,36 @@
-123
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>入仓单生成</title>
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="jQuery.print.min.js"></script>
+<link rel="stylesheet" type="text/css" href="index.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="print.css" media="print" />
+</head>
+
+<body>
+<div id="printarea">
+<div class="test">
+	123
+</div>
+<div class="test">
+	123
+</div>
+</div>
+<input type="submit" id="button" value="提交" />
+<script type="text/javascript">
+$("#button").click(function(){
+	var printDtd = $.Deferred();
+	$("#printarea").print({globalStyles: false,mediaPrint: true,deferred: printDtd});
+	
+	//$.when(printDtd)
+	//.done(function() {
+    //setTimeout(function() {
+    //    confirm("是否打印成功？");
+    //}, 1000);
+	//});
+});
+</script>
+</body>
+</html>
