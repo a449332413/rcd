@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+@page{
+     size: A4 portrait;     
+     margin: 3cm;
+}
+.test {
+	width:5cm;
+	hwight:5cm;
+}
